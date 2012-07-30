@@ -1,6 +1,13 @@
 //name space isolating closure
 var DASH = new function() {
 
+    if (document.location.hostname.match('localhost')){
+
+        console.log("enabled less watch");
+
+        less.watch();
+    }
+
     var app = angular.module('dashboard', []);
 
     this.SystemListController = function ($scope) {
