@@ -52,17 +52,22 @@
                     </ul>
                     <div class="tab-content">
 
-                        <table class="table table-bordered">
+                        <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th>Hostname</th>
-                                <th>Address</th>
+                                <th><a href="" ng-click="predicate = 'id'; reverse=false">#</a>
+                                    (<a href ng-click="predicate = '-id'; reverse=false">^</a>)</th>
+                                <th><a href="" ng-click="predicate = 'hostname'; reverse=false">Hostname</a>
+                                    (<a href ng-click="predicate = '-hostname'; reverse=false">^</a>)</th>
+                                <th><a href="" ng-click="predicate = 'ip'; reverse=false">IPV4 Address</a>
+                                    (<a href ng-click="predicate = '-ip'; reverse=false">^</a>)</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
+                            <tr ng-repeat="host in hosts | orderBy:predicate:reverse">
+                                <td>{{host.id}}</td>
+                                <td>{{host.hostname}}</td>
+                                <td>{{host.ip}}</td>
                             </tr>
                             </tbody>
                         </table>

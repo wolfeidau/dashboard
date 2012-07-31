@@ -4,6 +4,11 @@
 
 @header_color: #4878A8;
 
+@tropical: #A8D8F0;
+@peach: #F07830;
+@sauce: #781800;
+@atlantean: #487890;
+
 // GLOBAL VALUES
 // --------------------------------------------------
 
@@ -39,7 +44,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @atlantean;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -146,11 +151,11 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarBackground:                @header_color;
+@navbarBackgroundHighlight:       darken(@header_color, 10%);
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
+@navbarText:                      @tropical;
+@navbarLinkColor:                 @tropical; // darken(@tropical, 20%);
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
